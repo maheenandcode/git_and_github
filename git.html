@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Git Commands</title>
+</head>
+
+<body>
+    <h1>Common Git Commands</h1>
+
+    <strong><h2>1. Configure User Information:</h2></strong>
+    <p>To ensure proper credit for your commits, set up your name and email globally:</p>
+    <pre><strong><code>git config --global user.name "Maheen"
+git config --global user.email "m3malik@uwaterloo.ca"</code></strong></pre>
+
+    <strong><h2>2. Initialize a Repository:</h2></strong>
+    <p>Start a new Git repository in the current directory:</p>
+    <pre><strong><code>git init</code></strong></pre>
+
+    <strong><h2>3. Stage Changes:</h2></strong>
+    <p>Prepare files for commit using one of these commands:</p>
+    <pre><strong><code>git add --all     # Stage all changes, including deletions and additions
+git add -A        # Same as above
+git add .         # Stage changes in the current directory</code></strong></pre>
+
+    <strong><h2>4. Commit Changes:</h2></strong>
+    <p>Create a snapshot of your staged changes with a meaningful message:</p>
+    <pre><strong><code>git commit -m "First commit"</code></strong></pre>
+
+    <strong><h2>5. View Commit History:</h2></strong>
+    <p>See a list of commits, authors, dates, and messages:</p>
+    <pre><strong><code>git log</code></strong></pre>
+
+    <strong><h2>6. File States:</h2></strong>
+    <p>Tracked files: Files in previous commits.<br>
+    Untracked files: New files since the last commit.<br>
+    Modified files: Changed files since the last commit.<br>
+    Unmodified files: Files that haven't changed since the last commit.<br>
+    Staged files: Files moved to the staging area.</p>
+
+    <strong><h2>7. Check Repository Status:</h2></strong>
+    <p>Check the status of your repository, including untracked and modified files:</p>
+    <pre><strong><code>git status</code></strong></pre>
+
+    <strong><h2>8. Managing Unstaged Changes:</h2></strong>
+    <p>Use <strong><code>git add</code></strong> to stage changes or <strong><code>git restore</code></strong> to discard them.<br>
+    To restore your entire directory: <strong><code>git restore .</code></strong><br>
+    To restore using an older version: <strong><code>git checkout .</code></strong></p>
+
+    <strong><h2>9. Unstaging Changes:</h2></strong>
+    <p>Undo staging with:<br>
+    <strong><code>git restore --staged</code></strong></p>
+
+    <strong><h2>10. Ignoring Files:</h2></strong>
+    <p>Create a <strong><code>.gitignore</code></strong> file to exclude files from version control.</p>
+
+    <strong><h2>11. Deleting Untracked Files:</h2></strong>
+    <p>Remove untracked files from your working directory using:<br>
+    <strong><code>git clean -n      # Dry run<br>
+    git clean -d      # Including directories<br>
+    git clean -f      # Force deletion</code></strong></p>
+
+    <strong><h2>12. Untracked Files and <strong><code>git restore</code></strong>:</h2></strong>
+    <p><strong><code>git restore .</code></strong> doesn't delete untracked files, only reverts changes in tracked files.</p>
+
+    <strong><h2>13. Ignoring Files with <strong><code>.gitignore</code></strong>:</h2></strong>
+    <p>Ignored files won't be uploaded to GitHub. Create a <strong><code>.gitignore</code></strong> file and list files to ignore.</p>
+
+    <strong><h2>14. Git and Empty Files:</h2></strong>
+    <p>Git doesn't track empty files; they're not considered changes.</p>
+
+    <strong><h2>15. Clear Cache with <strong><code>git rm --cached</code></strong>:</h2></strong>
+    <p>Use <strong><code>git rm -r --cached .</code></strong> to clear the cache and unstage changes.</p>
+
+    <strong><h2>16. Delete and Restore Files:</h2></strong>
+    <p><strong><code>git rm filename</code></strong> deletes a file and stages the change.<br>
+    Restore using <strong><code>git restore --staged filename</code></strong> or <strong><code>git restore .</code></strong></p>
+
+    <strong><h2>17. Renaming Files with <strong><code>git mv</code></strong>:</h2></strong>
+    <p>Use <strong><code>git mv old new</code></strong> to rename and move files, avoiding two separate steps.</p>
+
+    <strong><h2>18. Viewing Differences:</h2></strong>
+    <p><strong><code>git diff</code></strong> compares file changes; use VS Code's source control too.</p>
+
+    <strong><h2>19. Summary of Commits with <strong><code>git log --oneline</code></strong>:</h2></strong>
+    <p>Get concise commit summaries with <strong><code>git log --oneline</code></strong>.</p>
+
+    <strong><h2>20. Changes from a Commit with <strong><code>git diff commit-hash</code></strong>:</h2></strong>
+    <p>Compare changes using <strong><code>git diff commit-hash</code></strong> from <strong><code>git log --oneline</code></strong>.</p>
+
+    <strong><h2>21. Amend a Commit with <strong><code>git commit --amend</code></strong>:</h2></strong>
+    <p>Edit commit messages or include additional changes with <strong><code>git commit --amend</code></strong>.</p>
+
+    <strong><h2>22. Resetting to a Commit with <strong><code>git reset</code></strong>:</h2></strong>
+    <p><strong><code>git reset commit-hash</code></strong> unstages changes after a commit; <strong><code>git reset --hard commit-hash</code></strong> also discards local changes.</p>
+
+    <strong><h2>23. Rebasing with <strong><code>git rebase</code></strong>:</h2></strong>
+    <p>Rewrite commit history and integrate changes using <strong><code>git rebase</code></strong> with options.</p>
+
+    <strong><h2>24. Branch Management:</h2></strong>
+    <p>List, switch, create, and copy branches with <strong><code>git branch</code></strong> and <strong><code>git switch</code></strong>.</p>
+
+    <strong><h2>25. Merging Changes with <strong><code>git merge</code></strong>:</h2></strong>
+    <p>Merge changes from one branch into another using <strong><code>git merge</code></strong>.</p>
+
+    <strong><h2>26. Deleting a Branch:</h2></strong>
+    <p>Delete branches using <strong><code>git branch -d name</code></strong> or <strong><code>git branch -D name</code></strong> (force).</p>
+    
+<strong><h2>27. Stashing Changes with <code>git stash</code>:</h2></strong>
+    <p>Temporarily store changes with <strong><code>git stash</code></strong>, and manage stashes:</p>
+    <p><strong><code>git stash</code></strong> - Temporarily store changes
+        <br><strong><code>git stash list</code></strong> - List stored stashes
+        <br><strong><code>git stash apply</code></strong> - Apply a stash
+        <br><strong><code>git stash pop</code></strong> - Apply and remove a stash</p>
+
+
+    <strong><h2>28. Remove All Untracked Files:</h2></strong>
+    <p>Use <strong><code>git clean</code></strong> to remove untracked files:</p>
+    <pre><strong><code>git clean -n      # Dry run
+git clean -d      # Including directories
+git clean -f      # Force deletion</code></strong></pre>
+
+</body>
+
+</html>
